@@ -3,6 +3,8 @@ Building a modern data warehouse with SQL Server, including ELT processes, data 
 
 This project demonstrates a comprehensive data warehousing and analytics solution, from building a data warehouse to generating actionable insights. Designed as a portfolio project highlights industry best practices in dta engineering and analytics. 
 
+## 🚀Project Requirements
+
 ### Objective
 Develop a modern data warehouse using SQL Server to consolidate sales data, enabling analytical reporting and informed decision-making. 
 
