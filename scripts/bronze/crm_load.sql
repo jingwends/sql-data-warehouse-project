@@ -1,3 +1,10 @@
+/*
+This is a simple SQL script to load CRM data into the bronze layer of a data warehouse without using a stored procedure.
+Simple, but fast and efficient way to load data into the bronze layer of a data warehouse.
+
+===========================================================
+*/
+
 TRUNCATE TABLE bronze.crm_cust_info;
 BULK INSERT bronze.crm_cust_info --faster insert than regualr insert
 FROM 'file_path'

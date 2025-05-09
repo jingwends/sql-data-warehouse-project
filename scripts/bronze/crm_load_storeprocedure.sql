@@ -1,3 +1,24 @@
+/* 
+====================================================
+Stored procedure to load CRM data into bronze layer.
+This script loads data from the source CRM system (CSV files) into the bronze layer of the data warehouse.
+====================================================
+It performs the following operations:
+1. Truncates the existing data in the bronze layer tables.
+2. Use 'BULk INSERT' loading new data from CSV files into the bronze layer tables.
+3. Measures and prints the load time for each table.
+4. Handles errors during the loading process.
+5. Prints the total load time for all tables.
+6. Prints error messages if any errors occur during the loading process.
+====================================================
+====================================================
+Parameters: None. 
+The procedure does not take any parameters.
+====================================================
+Usage Example
+EXEC bronze.load_bronze_crm;
+*/
+
 CREATE OR ALTER PROCEDURE bronze.load_bronze_crm AS
 BEGIN
 	DECLARE @start_time DATETIME, @end_time DATETIME, @batch_start_time DATETIME, @batch_end_time DATETIME;

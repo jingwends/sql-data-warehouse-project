@@ -1,3 +1,10 @@
+/* 
+====================================================
+DDL Script: Create Bronze Tables from CRM system
+This scipt creates tables in the the 'bronze' shema, dropping existing tables if they already exist.
+Run this script to re-create the tables in the bronze layer of the data warehouse.
+*/
+
 IF OBJECT_ID ('bronze.crm_cust_info', 'U') IS NOT NULL
 	DROP TABLE bronze.crm_cust_info;
 CREATE TABLE bronze.crm_cust_info(
