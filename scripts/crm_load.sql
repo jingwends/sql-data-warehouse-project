@@ -1,6 +1,6 @@
 TRUNCATE TABLE bronze.crm_cust_info;
 BULK INSERT bronze.crm_cust_info --faster insert than regualr insert
-FROM "C:\Users\lxtsh\OneDrive\Documents\Jingwen\sql-data-warehouse-project\datasets\source_crm\cust_info.csv"
+FROM 'file_path'
 WITH (
 	FIRSTROW =2, 
 --Load the data from the second row as first row is header and we already have that
@@ -13,7 +13,7 @@ WITH (
 
 TRUNCATE TABLE bronze.crm_prd_info;
 BULK INSERT bronze.crm_prd_info 
-FROM "C:\Users\lxtsh\OneDrive\Documents\Jingwen\sql-data-warehouse-project\datasets\source_crm\prd_info.csv"
+FROM 'file_path'
 WITH (
 	FIRSTROW = 2,
 	FIELDTERMINATOR = ',',
@@ -22,7 +22,7 @@ WITH (
 
 TRUNCATE TABLE bronze.crm_sales_details;
 BULK INSERT bronze.crm_sales_details 
-FROM "C:\Users\lxtsh\OneDrive\Documents\Jingwen\sql-data-warehouse-project\datasets\source_crm\sales_details.csv"
+FROM 'file_path'
 WITH (
 	FIRSTROW = 2,
 	FIELDTERMINATOR = ',',
